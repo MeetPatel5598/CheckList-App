@@ -1,19 +1,24 @@
 import React, { Component } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <a href="#default" className="logo">
+        <Link className="link-logo" to="/">
           TO-DO APP
-        </a>
+        </Link>
         <div className="header-right">
-          <a className="active" href="#home">
+          <Link className="link-logo" to="/Home">
             Home
-          </a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+          </Link>
+          <Link className="link-logo" to="/About">
+            Contact
+          </Link>
+          <Link className="link-logo" to="/About">
+            About
+          </Link>
         </div>
       </div>
     );
